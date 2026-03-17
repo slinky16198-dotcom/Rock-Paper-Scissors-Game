@@ -39,3 +39,12 @@ function determineWinner(player, computer) {
         document.getElementById('computer-score').textContent = cScore;
     }
 }
+
+document.getElementById('reset-btn').addEventListener('click', () => {
+    pScore = 0;
+    cScore = 0;
+    document.getElementById('player-score').textContent = pScore;
+    document.getElementById('computer-score').textContent = cScore;
+    msg.textContent = "Tournament Reset!";
+    choicesLog.textContent = "";
+});

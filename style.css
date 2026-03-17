@@ -51,4 +51,98 @@ body {
 #message {
     font-size: 1.5rem;
     color: #3fb950; 
+
+}
+/* style.css */
+
+/* --- Mobile and Tablet Optimization --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Adjust the main container spacing */
+    .game-container {
+        padding: 1.5rem;
+        margin: 10px;
+        max-width: 90%;
+    }
+
+    /* 2. Stack the choice buttons vertically */
+    .choices-container {
+        flex-direction: column; /* Switches from side-by-side to stacked */
+        gap: 1rem;
+        width: 100%;
+    }
+
+    /* 3. Make buttons full-width for easier thumb tapping */
+    .choice-btn {
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1.1rem;
+    
+    }
+
+    /* 4. Scale down the headings so they don't wrap weirdly */
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .score-board {
+        font-size: 1rem;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /* 5. Adjust the result text size */
+    #result-msg {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+/* style.css */
+
+.reset-section {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#reset-btn {
+    background: transparent;
+    border: 1px solid var(--error-red, #ff4d4d);
+    color: var(--error-red, #ff4d4d);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#reset-btn:hover {
+    background: rgba(255, 77, 77, 0.1);
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.2);
+}
+
+#reset-btn:active {
+    transform: scale(0.95);
+}
+
+/* Ensure it stacks nicely on mobile */
+@media screen and (max-width: 768px) {
+    #reset-btn {
+        width: 100%;
+    }
+}
+
+/* --- Small Mobile Optimization (e.g., iPhone SE) --- */
+@media screen and (max-width: 400px) {
+    .game-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
 }
